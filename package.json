@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@better-auth/utils": "^0.4.0",
     "@prisma/adapter-pg": "^7.8.0",
     "@prisma/client": "^7.8.0",
     "better-auth": "^1.6.9",
@@ -8,7 +9,10 @@
     "pg": "^8.20.0"
   },
   "scripts": {
-    "dev": "tsx src/app.ts"
+    "dev": "tsx watch src/app.ts",
+    "build": "tsc",
+    "start": "node dist/app.js",
+    "db:seed": "tsx prisma/seed.ts"
   },
   "type": "module",
   "devDependencies": {
